@@ -40,6 +40,7 @@ Foregrounds: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE.
 Backgrounds: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE.
 Styles: BOLD, UNDERLINE, RESET
 ```
-Styles.RESET resets foreground, background, and brightness. Colorama will perform this reset automatically on program exit.
+
+reset the function resets the foreground, background. It must be called upon exiting the program.
 ## License
 This module  is licensed under the terms of the MIT license.
