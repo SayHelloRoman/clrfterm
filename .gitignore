@@ -3,3 +3,5 @@
 test.py
 progress.py
 clrfterm.egg-info
+*.gz
+*.whl
