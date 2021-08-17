@@ -40,8 +40,28 @@ Foregrounds: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE.
 Backgrounds: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE.
 Styles: BOLD, UNDERLINE, RESET
 ```
-
 reset the function resets the foreground, background. It must be called upon exiting the program.
+
+## Windows
+
+The [Windows Console](https://en.wikipedia.org/wiki/Windows_Console) did not support ANSI escape sequences, nor did Microsoft provide any method to enable them.
+But In 2016, Microsoft released the Windows 10 version 1511 update which unexpectedly implemented support for ANSI escape sequences, over two decades after the debut of Windows NT.
+
+clrfterm can enable ANSI escape sequences in CMD.
+
+```python
+from clrflterm import (
+    enable_ansi,
+    Foreground,
+    reset,
+)
+
+
+enable_ansi()
+print(Foreground.RED + "Hello")
+reset()
+```
+
 ## License
 This module  is licensed under the terms of the MIT license.
 Name by @xterdd

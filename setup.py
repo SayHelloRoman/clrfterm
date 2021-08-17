@@ -1,10 +1,14 @@
 from setuptools import setup
 
-
 with open("readme.md") as f:
-    setup(name='clrfterm',
-          version='1.0',
-          description=f.read(),
-          packages=['clrfterm'],
-          author_email='erastovka1933@gmail.com',
-          zip_safe=False)
+    description = f.read()
+
+setup(name='clrfterm',
+      version='0.1',
+      description="Module that decorates your console",
+      packages=['clrfterm'],
+      long_description=description,
+      long_description_content_type='text/markdown',
+      url="https://github.com/SayHelloRoman/clrfterm",
+      zip_safe=False
+      )

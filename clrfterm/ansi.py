@@ -1,7 +1,16 @@
 from enum import Enum
 
 
-class Foreground(str, Enum):
+class AnsiEscape(str, Enum):
+    """
+    Base class
+    """
+
+
+class Foreground(AnsiEscape):
+    """
+    ANSI escape code for foreground
+    """
     BLACK         = "\033[30m"
     RED           = "\033[31m"
     GREEN         = "\033[32m"
@@ -12,7 +21,10 @@ class Foreground(str, Enum):
     WHITE         = "\033[37m"
 
 
-class Backgrounds(str, Enum):
+class Backgrounds(AnsiEscape):
+    """
+    ANSI escape code for backgrounds
+    """
     BLACK         = "\033[40m"
     RED           = "\033[41m"
     GREEN         = "\033[42m"
@@ -23,7 +35,10 @@ class Backgrounds(str, Enum):
     WHITE         = "\033[47m"
 
 
-class Styles(str, Enum):
+class Styles(AnsiEscape):
+    """
+    ANSI escape code for styles
+    """
     BOLD          = "\033[1m"
     UNDERLINE     = "\033[4m"
     RESET         = "\033[0m"
