@@ -1,14 +1,23 @@
 from setuptools import setup
+import os.path
 
-with open("readme.md") as f:
-    description = f.read()
+
+if os.path.exists('./readme.md'):
+    with open("readme.md") as f:
+        description = f.read()
+
+else:
+    description = ""
 
 setup(name='clrfterm',
-      version='0.2',
+      version='0.22',
       description="Module that decorates your console",
       packages=['clrfterm'],
       long_description=description,
       long_description_content_type='text/markdown',
       url="https://github.com/SayHelloRoman/clrfterm",
-      zip_safe=False
+      zip_safe=False,
+      install_requires=[
+          "wheel"
+      ]
       )
