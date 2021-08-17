@@ -44,3 +44,4 @@ Styles: BOLD, UNDERLINE, RESET
 reset the function resets the foreground, background. It must be called upon exiting the program.
 ## License
 This module  is licensed under the terms of the MIT license.
+Name by @xterdd
