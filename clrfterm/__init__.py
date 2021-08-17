@@ -1,3 +1,5 @@
+__version__ = "0.2"
+
 from sys import stdout
 from typing import Union
 
