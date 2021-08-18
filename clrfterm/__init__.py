@@ -1,4 +1,4 @@
-__version__ = "0.22"
+__version__ = "0.3"
 
 from sys import stdout
 from typing import Union
@@ -9,6 +9,7 @@ from .ansi import (
     Backgrounds,
 )
 from .win import enable_ansi
+from .message_builder import MessageBuilder
 
 
 def rprint(

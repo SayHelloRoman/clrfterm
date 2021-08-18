@@ -42,6 +42,23 @@ Styles: BOLD, UNDERLINE, RESET
 ```
 reset the function resets the foreground, background. It must be called upon exiting the program.
 
+#### Fluent interface
+In software engineering, a fluent interface is an object-oriented API whose design relies extensively on method chaining.
+
+clrfterm has a MessageBuilder class that implements the Fluent interface
+```python
+from clrfterm import (
+    MessageBuilder,
+    Foreground
+)
+
+message = (
+    MessageBuilder()
+        .set_foreground(Foreground.RED)
+        .set_reset(True)
+)
+print(message.set_text("Hello"))
+```
 ## Windows
 
 The [Windows Console](https://en.wikipedia.org/wiki/Windows_Console) did not support ANSI escape sequences, nor did Microsoft provide any method to enable them.
