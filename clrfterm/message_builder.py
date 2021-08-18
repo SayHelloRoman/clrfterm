@@ -15,6 +15,13 @@ class MessageBuilder:
         self.__style = ""
         self.__reset = ""
 
+    def __str__(self) -> str:
+        return (self.__foreground +
+                self.__style +
+                self.__background +
+                self.__text +
+                self.__reset)
+
     def set_text(self, text: str) -> "MessageBuilder":
         self.__text = text
         return self
@@ -34,6 +41,3 @@ class MessageBuilder:
     def set_reset(self, reset: bool) -> "MessageBuilder":
         self.__reset = Styles.RESET if reset else ""
         return self
-
-    def __str__(self) -> str:
-        return self.__foreground + self.__style + self.__background + self.__text + self.__reset
