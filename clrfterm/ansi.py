@@ -19,9 +19,10 @@ class Foreground(AnsiEscape):
     MAGENTA       = "\033[35m"
     CYAN          = "\033[36m"
     WHITE         = "\033[37m"
+    RESET         = "\033[39m"
 
 
-class Backgrounds(AnsiEscape):
+class Background(AnsiEscape):
     """
     ANSI escape code for backgrounds
     """
@@ -33,9 +34,10 @@ class Backgrounds(AnsiEscape):
     MAGENTA       = "\033[45m"
     CYAN          = "\033[46m"
     WHITE         = "\033[47m"
+    RESET         = "\033[49m"
 
 
-class Styles(AnsiEscape):
+class Style(AnsiEscape):
     """
     ANSI escape code for styles
     """
