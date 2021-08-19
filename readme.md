@@ -16,7 +16,7 @@ pip install clrfterm
 ## Usage
 ##### Colored Output
 ```python
-from clrflterm import (
+from clrfterm import (
     Style,
     Foreground,
     Background,
@@ -73,10 +73,10 @@ But In 2016, Microsoft released the Windows 10 version 1511 update which unexpec
 clrfterm can enable ANSI escape sequences in CMD.
 
 ```python
-from clrflterm import (
+from clrfterm import (
     enable_ansi,
     Foreground,
-    reset,
+    reset
 )
 
 
