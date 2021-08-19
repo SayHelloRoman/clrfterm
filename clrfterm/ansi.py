@@ -19,6 +19,7 @@ class Foreground(AnsiEscape):
     MAGENTA       = "\033[35m"
     CYAN          = "\033[36m"
     WHITE         = "\033[37m"
+    RESET         = "\033[39m"
 
 
 class Background(AnsiEscape):
@@ -33,6 +34,7 @@ class Background(AnsiEscape):
     MAGENTA       = "\033[45m"
     CYAN          = "\033[46m"
     WHITE         = "\033[47m"
+    RESET         = "\033[49m"
 
 
 class Style(AnsiEscape):
