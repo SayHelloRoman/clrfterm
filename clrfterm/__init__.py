@@ -1,4 +1,4 @@
-__version__ = "1.0.2"
+__version__ = "1.0.4"
 
 from sys import stdout
 from typing import Union
