@@ -17,17 +17,17 @@ pip install clrfterm
 ##### Colored Output
 ```python
 from clrflterm import (
-    Styles,
+    Style,
     Foreground,
-    Backgrounds,
+    Background,
     rprint,
     reset,
 )
 
 
 print(Foreground.RED + "Red foreground text")
-print(Backgrounds.WHITE + "White backgrounds text")
-print(Styles.UNDERLINE + "Underlined text")
+print(Background.WHITE + "White backgrounds text")
+print(Style.UNDERLINE + "Underlined text")
 reset()
 print("Back to normal text")
 
@@ -36,28 +36,34 @@ print("Normal text")
 ```
 ##### Available formatting constants are:
 ```
-Foregrounds: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE.
-Backgrounds: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE.
-Styles: BOLD, UNDERLINE, RESET
+Foreground: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE.
+Background: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE.
+Style: BOLD, UNDERLINE, RESET
 ```
 reset the function resets the foreground, background. It must be called upon exiting the program.
 
 #### Fluent interface
 In software engineering, a fluent interface is an object-oriented API whose design relies extensively on method chaining.
 
-clrfterm has a MessageBuilder class that implements the Fluent interface
+clrfterm has a Message, Phrase, PhraseStyle classes that implements the Fluent interface
 ```python
-from clrfterm import (
-    MessageBuilder,
-    Foreground
-)
+from clrfterm import Foreground, Background, Style
+from clrfterm.messages import Message, Phrase, PhraseStyle
 
-message = (
-    MessageBuilder()
+style = (
+    PhraseStyle()
         .set_foreground(Foreground.RED)
-        .set_reset(True)
+        .set_background(Background.CYAN)
+        .set_style(Style.BOLD)
 )
-print(message.set_text("Hello"))
+print(Message()
+    .add(Phrase()
+        .set_text('hello')
+        .set_style(style))
+    .add(Phrase()
+        .set_text('world')
+        .set_style(style))
+)
 ```
 ## Windows
 

@@ -1,4 +1,4 @@
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 from sys import stdout
 from typing import Union
@@ -9,7 +9,6 @@ from clrfterm.ansi import (
     Background,
 )
 from clrfterm.win import enable_ansi
-from clrfterm.message_builder import MessageBuilder
 
 
 def rprint(

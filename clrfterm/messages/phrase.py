@@ -1,5 +1,6 @@
-from clrfterm.ansi import Style
 from typing import Optional, Union
+
+from clrfterm.ansi import Style
 from clrfterm.messages.phrase_style import PhraseStyle
 
 

@@ -10,7 +10,7 @@ else:
     description = ""
 
 setup(name='clrfterm',
-      version='1.0.1',
+      version='1.0.2',
       description="Module that decorates your console",
       packages=['clrfterm'],
       long_description=description,
