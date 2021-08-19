@@ -21,7 +21,7 @@ class Foreground(AnsiEscape):
     WHITE         = "\033[37m"
 
 
-class Backgrounds(AnsiEscape):
+class Background(AnsiEscape):
     """
     ANSI escape code for backgrounds
     """
@@ -35,7 +35,7 @@ class Backgrounds(AnsiEscape):
     WHITE         = "\033[47m"
 
 
-class Styles(AnsiEscape):
+class Style(AnsiEscape):
     """
     ANSI escape code for styles
     """

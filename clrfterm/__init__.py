@@ -3,30 +3,30 @@ __version__ = "1.0.1"
 from sys import stdout
 from typing import Union
 
-from .ansi import (
-    Styles,
+from clrfterm.ansi import (
+    Style,
     Foreground,
-    Backgrounds,
+    Background,
 )
-from .win import enable_ansi
-from .message_builder import MessageBuilder
+from clrfterm.win import enable_ansi
+from clrfterm.message_builder import MessageBuilder
 
 
 def rprint(
         text: str,
         *,
         foreground: Union[Foreground, str] = "",
-        style: Union[Styles, str] = "",
-        background: Union[Backgrounds, str] = ""
+        style: Union[Style, str] = "",
+        background: Union[Background, str] = ""
 ) -> None:
     """
     stdout.write auto-reset wrapper
     """
-    stdout.write(foreground + style + background + text + Styles.RESET + "\n")
+    stdout.write(foreground + style + background + text + Style.RESET + "\n")
 
 
 def reset() -> None:
     """
     function reset
     """
-    stdout.write(Styles.RESET.value)
+    stdout.write(Style.RESET.value)

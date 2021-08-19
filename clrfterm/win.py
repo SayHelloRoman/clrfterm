@@ -2,7 +2,7 @@ import ctypes
 import platform
 from typing import Optional, NoReturn
 
-from .error import PlatformError
+from clrfterm.error import PlatformError
 
 
 def enable_ansi() -> Optional[NoReturn]:

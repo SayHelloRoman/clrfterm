@@ -1,9 +1,9 @@
 from typing import Union
 
-from .ansi import (
-    Styles,
+from clrfterm.ansi import (
+    Style,
     Foreground,
-    Backgrounds,
+    Background,
 )
 
 
@@ -32,14 +32,14 @@ class MessageBuilder:
         self.__foreground = fg
         return self
 
-    def set_background(self, bg: Backgrounds) -> "MessageBuilder":
+    def set_background(self, bg: Background) -> "MessageBuilder":
         self.__background = bg
         return self
 
-    def set_style(self, st: Styles) -> "MessageBuilder":
+    def set_style(self, st: Style) -> "MessageBuilder":
         self.__style = st
         return self
 
     def set_reset(self, reset: bool) -> "MessageBuilder":
-        self.__reset = Styles.RESET if reset else ""
+        self.__reset = Style.RESET if reset else ""
         return self
