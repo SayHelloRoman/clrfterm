@@ -43,4 +43,4 @@ class Style(AnsiEscape):
     """
     BOLD          = "\033[1m"
     UNDERLINE     = "\033[4m"
-    RESET         = "\033[0m"
+    RESET_ALL     = "\033[0m"

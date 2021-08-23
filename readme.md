@@ -36,9 +36,9 @@ print("Normal text")
 ```
 ##### Available formatting constants are:
 ```
-Foreground: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE.
-Background: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE.
-Style: BOLD, UNDERLINE, RESET
+Foreground: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET
+Background: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET
+Style: BOLD, UNDERLINE, RESET_ALL
 ```
 reset the function resets the foreground, background. It must be called upon exiting the program.
 

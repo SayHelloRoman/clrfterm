@@ -1,6 +1,7 @@
+import unittest
+
 from clrfterm.ansi import Background, Foreground, Style
 from clrfterm.messages import Phrase, Message
-import unittest
 
 
 class TestMessage(unittest.TestCase):
