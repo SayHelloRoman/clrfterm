@@ -85,6 +85,24 @@ print(Foreground.RED + "Hello")
 reset()
 ```
 
+## ProgressBar
+
+A progress bar is a graphical control element used to visualize the progression of an extended computer operation, such as a download, file transfer, or installation.
+
+```python
+from time import sleep
+
+from clrfterm.progress import Bar
+
+
+bar = Bar(50)
+
+for i in range(50):
+    bar.next()
+    sleep(0.01)
+```
+
+
 ## License
 This module  is licensed under the terms of the MIT license.
 Name by @xterdd
