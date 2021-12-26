@@ -8,7 +8,7 @@
 clrfterm makes it easy to work with ANSI escape sequences that decorate your console.
 ANSI escape sequences are a standard for in-band signaling to control cursor location, color, font styling, and other options on video text terminals and terminal emulators. Certain sequences of bytes, most starting with an ASCII escape character and a bracket character, are embedded into text. The terminal interprets these sequences as commands, rather than text to display verbatim.
 ## Installation
-* Tested on CPython 3.7, 3.8, 3.9 and PyPy 3.7.10
+* Tested on CPython 3.7, 3.8, 3.9, 3.10 and PyPy 3.7.10
 * No requirements other than the standard library.
 ```
 pip install clrfterm
