@@ -5,7 +5,7 @@ from typing import Optional, NoReturn
 from clrfterm.error import PlatformError
 
 
-def enable_ansi() -> Optional[NoReturn]:
+def enable_ansi() -> None:
     """
     This is for those who use cmd,
     windows does not support ansi sequences,
